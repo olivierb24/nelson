@@ -1,8 +1,10 @@
 .header{
     display: flex;
+    z-index: 1;
+    position: fixed;
     background-color: black;
     text-align: center;
-    height: 6rem;
+    height: 5rem;
     width: 100%;
     align-items: center;
     padding: 1.5rem;
