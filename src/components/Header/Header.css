@@ -1,0 +1,83 @@
+.header{
+    display: flex;
+    background-color: black;
+    text-align: center;
+    height: 6rem;
+    width: 100%;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.logo-header{
+    display: flex;
+    background-color: red;
+    height: 4rem;
+    width: 6rem;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.tabs-box-website{
+    display: flex;
+    height: 4rem;
+    width: auto;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.tabs-website{
+    display: flex;
+}
+
+.tab-website{
+    color: white;
+    padding: 1rem;
+    align-self: center;
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+.tab-website:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.tab-website::after{
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s ease-in-out;
+}
+.tab-website:hover::after{
+    width: 100%;
+}
+
+/* Style for the client options right hand side*/
+.tabs-box-client{
+    display: flex;
+    height: 4rem;
+    width: auto;
+    text-align: center;
+    justify-content: space-around;
+    margin-right: 5%;
+}
+
+.tabs-client{
+    display: flex;
+}
+
+.tab-client{
+    color: white;
+    padding: 1rem;
+    align-self: center;
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+.tab-client:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
