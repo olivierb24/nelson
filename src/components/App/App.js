@@ -15,7 +15,7 @@ class App extends React.Component{
 
   render(){
     return(
-      <div className='App'>
+      <div className='container'>
       <Header tabsClient={this.state.tabsClient} tabsWebsite={this.state.tabsWebsite} />
       <div className='banner'>
         <img src={banner} />
