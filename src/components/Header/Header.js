@@ -1,43 +1,41 @@
 import React from 'react';
 import './Header.css';
+import { directive } from '@babel/types';
 
 export class Header extends React.Component{
     constructor(props) {
         super(props);
-
-        this.tabItemsWebsite = this.tabItemsWebsite.bind(this);
-        this.tabItemsClient = this.tabItemsClient.bind(this);
+        
+        this.navigation = this.navigation.bind(this);
     }
-
-
-    tabItemsWebsite() {
-        return this.props.tabsWebsite.map( tabItem => {
-            return <li className='tab-website' key={tabItem}>{tabItem}</li>;
-        })
-    }
-
-    tabItemsClient() {
-        return this.props.tabsClient.map( tabItem => {
-            return <li className='tab-client' key={tabItem}>{tabItem}</li>;
+    
+    
+    navigation() {
+        return this.props.navWebsite.map( navItem => {
+            return <li key={navItem}>{navItem}</li>;
         })
     }
     
     render(){
-        return(
-            <div className='header'>
-            <div className='logo-header'>
-            </div>
-            <div className='tabs-box-website'>
-                <ul className='tabs-website'>
-                {this.tabItemsWebsite()}
-                </ul>
-            </div>
-            <div className='tabs-box-client'>
-                <ul className='tabs-client'>
-                    {this.tabItemsClient()}
-                </ul>
-            </div>
-            </div>
+        return (
+            <header>
+                <img src="#" alt="" className='logo'/>
+                <div className='social'>
+                    <img src='#' alt=''/>
+                    <img src='#' alt=''/>
+                </div>
+                <nav>
+                    <ul className='nav'>
+                        {this.navigation()}
+                    </ul>
+                </nav>
+                <nav className='icons'>
+                    <ul>
+                        <img src=''/>
+                        <img src=''/>
+                    </ul>
+                </nav>
+            </header>
             )
         }
     }

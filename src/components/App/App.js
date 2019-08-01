@@ -8,22 +8,20 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      tabsWebsite: ['Home', 'Shop', 'Contact Us', 'About Us', 'Maxime'],
-      tabsClient: ['+','+','+']
+      navWebsite: ['Home', 'Products', 'Coming Soon', 'Contact Us', 'Shipping', 'About Us'],
     }
   }
-
+  
   render(){
     return(
       <div className='container'>
-      <Header tabsClient={this.state.tabsClient} tabsWebsite={this.state.tabsWebsite} />
-      <div className='banner'>
+        <Header navWebsite={this.state.navWebsite} />
+        <div className='banner'>
         <img src={banner} />
+        </div>
       </div>
-
-      </div>
-    )
+    )}
   }
-}
-
-export default App;
+  
+  export default App;
+  
